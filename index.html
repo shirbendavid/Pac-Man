@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--check the links (model dialog- about)-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+	<!--good-->
+	<script src="javascript/jquery-3.4.1.slim.min.js"></script>
+	<script type="text/javascript" src="javascript/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<!--icons-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<header width:25%;>
+		<p><img src="images/p.png" width="250px"></p>
+		<p><b> Shir Ben-Dor 204675797 | Liron Ben-Yakov 204385884 </b></p>
+		<!---	<p><img src="images/pac1.png" width="50px"><img src="images/pac3.png" width="50px"></p>-->
+		<p></p>
+	</header>
+	<div id="menu">
+		<li><a onclick="welcome()">WELCOME</a></li>
+		<li><a onclick="register()">REGISTER</a></li>
+		<li><a onclick="login()">LOGIN</a></li>
+		<li><a type="button" data-toggle="modal" data-target="#aboutDiv">ABOUT</a></li>
+	</div>
+	<br>
+
+	<div id="content" class="content">
+
+		<div id="welcomeDiv">
+			
+			<button1 id="loginButton" onclick="login()"><img src="images/3.png"> Login</button1>
+			<button1 id="registerButton" onclick="register()"><img src="images/3.png"> Register</button1>
+			<br />
+			<br />
+			<br />
+			<br />
+
+		</div>
+
+		<div id="registerDiv">
+			<form class="cmxform" id="signupForm" method="get" action="">
+				<fieldset>
+					<legend><b>REGISTRATION:</b></legend>
+					<div class="center">
+						<div class="row">
+							<label for="firstname" class="col-sm-4">Firstname</label>
+							<input id="firstname" name="firstname" type="text" class="col-sm-4">
+						</div>
+						<div class="row">
+							<label for="lastname" class="col-sm-4">Lastname</label>
+							<input id="lastname" name="lastname" type="text" class="col-sm-4">
+						</div>
+						<div class="row">
+							<label for="username" class="col-sm-4">Username</label>
+							<input id="username" name="username" type="text" class="col-sm-4">
+						</div>
+						<div class="row">
+							<label for="password" class="col-sm-4">Password</label>
+							<input id="password" name="password" type="password" class="col-sm-4">
+						</div>
+						<div class="row">
+							<label for="confirm_password" class="col-sm-4">Confirm password</label>
+							<input id="confirm_password" name="confirm_password" type="password" class="col-sm-4">
+						</div>
+						<div class="row">
+							<label for="email" class="col-sm-4">Email</label>
+							<input id="email" name="email" type="email" class="col-sm-4">
+						</div>
+						<div class="row">
+							<label for="birth" class="col-sm-4">BirthDay</label>
+							<input type="date" name="birth" id="birth" placeholder="Enter your date of birth"
+								class="col-sm-4">
+						</div>
+					</div>
+					<br>
+					<p>
+						<button class="submit" type="submit" value="Submit">SUBMIT</button>
+					</p>
+				</fieldset>
+			</form>
+		</div>
+
+		<div id="loginDiv">
+			<div id="card" class="card card-container login">
+				<legend><b>LOGIN:</b></legend>
+
+				<p>
+					<input type="text" id="checkUsername" class="form" placeholder="Username" required autofocus>
+				</p>
+				<p>
+					<input type="password" id="checkPassword" class="form" placeholder="Password" required>
+				</p>
+			</div>
+			<button onclick="loginButton()" type="submit">Login</button>
+		</div>
+	</div>
+
+	<div id="aboutDiv" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" id="closeModel" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">About</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						<div style="text-align: center;"><b>Created by Liron Ben-Yakov & Shir Ben-Dor</b></div><br>
+						<p>
+							We used jQuery version 3.4.1 and jQuery validation plugin.<br>
+							We used template from w3School to create modal dialog for "About" window.<br>
+							<br>
+							<u>Our difficulties in the project:</u><br>
+							1. Writing code lines for the first time in javaScript.<br>
+							2. Use html5 for drawing the Pacman's mouth in all directions and the size of the balls.<br>
+						</p>
+						
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="settingDiv">
+		<form class="cmxform" id="setting">
+			<fieldset>
+				<legend><b>SETTING:</b></legend>
+				<div class="center">
+					<div class="row">
+						<label for="upKey" class="col-sm-4">Up key:</label>
+						<input type="text" size="20" id="up" name="up" placeholder="Select up key" autocomplete="off"
+							class="col-sm-4">
+					</div>
+					<div class="row">
+						<label for="downKey" class="col-sm-4">Down key:</label>
+						<input type="text" size="20" id="down" name="down" placeholder="Select down key"
+							autocomplete="off" class="col-sm-4">
+					</div>
+					<div class="row">
+						<label for="rightKey" class="col-sm-4">Right key:</label>
+						<input type="text" size="20" id="right" name="right" placeholder="Select right key"
+							autocomplete="off" class="col-sm-4">
+					</div>
+					<div class="row">
+						<label for="leftKey" class="col-sm-4">Left key:</label>
+						<input type="text" size="20" id="left" name="left" placeholder="Select left key"
+							autocomplete="off" class="col-sm-4">
+					</div>
+					<div class="row">
+						<label class="col-sm-4">Number of balls:</label>
+						<input type="number" id="numberOfBalls" min="50" max="90" value="50" class="col-sm-4">
+					</div>
+					<div class="row">
+						<label class="col-sm-4">Ball of 5 point:</label>
+						<input type="color" id="fiveBall" name="fiveBall" value="#F996B8" class="col-sm-4">
+					</div>
+					<div class="row">
+						<label class="col-sm-4">Ball of 15 point:</label>
+						<input type="color" id="fifteenBall" name="fifteenBall" value="#CE96F9" class="col-sm-4">
+					</div>
+					<div class="row">
+						<label class="col-sm-4">Ball of 25 point:</label>
+						<input type="color" id="twentyFiveBall" name="twentyFiveBall" value="#87F7F5" class="col-sm-4">
+					</div>
+					<div class="row">
+						<label class="col-sm-4">Game time:</label>
+						<input type="number" id="timeOfGame" min="60" value="60" placeholder="Minimum 60 seconds"
+							class="col-sm-4">
+					</div>
+					<div class="row">
+						<label class="col-sm-4">Number of monsters:</label>
+						<input type="number" id="numberOfMonsters" min="1" max="4" value="1" placeholder="1"
+							class="col-sm-4">
+					</div>
+				</div>
+				<br>
+				<button onclick="randomSettings()">Random</button>
+				<button class="submit" type="submit" value="Submit">play game</button>
+			</fieldset>
+		</form>
+
+	</div>
+
+	<div id="canvesDiv">
+		<div id="left" class="left">
+			<p id="welcome_user" class="welcome_user"></p>
+
+			<div id="setting_board" class="setting_board">
+
+			
+				<p class="welcome_user"><u>Setting :</u></p>
+				<div class="row" id="upSetting">
+					<label for="lblUp" class="col-sm-4">UP:</label>
+					<input id="lblUp" value="" type="text" class="without"class="col-sm-4" />
+				</div>
+				<div class="row" id="downSetting">
+					<label for="lblDown" class="col-sm-4">DOWN:</label>
+					<input id="lblDown" value="" type="text" class="without" class="col-sm-4" />
+				</div>
+				<div class="row" id="rightSetting">
+					<label for="lblRight" class="col-sm-4">RIGHT:</label>
+					<input id="lblRight" value="" type="text" class="without" class="col-sm-4" />
+				</div>
+				<div class="row" id="leftSetting">
+					<label for="lblLeft" class="col-sm-4">LEFT:</label>
+					<input id="lblLeft" value="" type="text"class="without" class="col-sm-4" />
+				</div>
+				<div class="row" id="ballSetting">
+					<label for="lblBalls" class="col-sm-4">BALLS:</label>
+					<input id="lblBalls" type="text" class="without" class="col-sm-4" />
+				</div>
+				<div class="row" id="monstersSetting">
+					<label for="lblMonsters" class="col-sm-4">MONSTERS:</label>
+					<input id="lblMonsters" type="text" class="without" class="col-sm-4" />
+				</div>
+				<div class="row" id="ball5Setting">
+					<label for="lblBall5" class="col-sm-4">5 POINTS:</label>
+					<input id="lblBall5" value="#F996B8" type="color" class="without" class="col-sm-4" />
+				</div>
+				<div class="row" id="ball15Setting">
+					<label for="lblBall15" class="col-sm-4">15 POINTS:</label>
+					<input id="lblBall15" value="#CE96F9" type="color" class="without" class="col-sm-4" />
+				</div>
+				<div class="row" id="ball25Setting">
+					<label for="lblBall25" class="col-sm-4">25 POINTS:</label>
+					<input id="lblBall25" value="#87F7F5" type="color" class="without" class="col-sm-4" />
+				</div>
+			</div>
+			<br>
+			<div id="newGame">
+				<button1 onclick="newGame()" type="submit"><img src="images/3.png"> <B>New game</B></button1>
+			</div>
+			<br>
+			<br>
+		</div>
+		<div id="game">
+			<p>
+				<label for="lblScore">SCORE:</label>
+				<input id="lblScore" type="text" size="5" class="without1" />
+				<label for="lblTime">TIME:</label>
+				<input id="lblTime" type="text" size="5" class="without1" />
+				<label for="lblLives">LIVES:</label>
+				<label id="lblLives"> </label>
+			</p>
+			<!--<input id="lblLifes" value="" type="text" size="5" class="without" class="col-sm-3"/></p>-->
+			<canvas id="canvas" height="590" width="800" style="width:50%;"></canvas>
+		</div>
+	</div>
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<footer>
+		<span class="foot"><b><u>Contact us:</u></b>
+			<b>Liron:</b>
+			<a href="mailto:oskar@post.bgu.ac.il"><i class="fa fa-envelope"></i></a>
+			<a href="https://www.facebook.com/liron.oskar" class="fa fa-facebook"></a>
+			<a href="https://www.instagram.com/lironoskar/" class="fa fa-instagram"></a>
+			<b>Shir:</b>
+			<a href="mailto:bendsh@post.bgu.ac.il"><i class="fa fa-envelope"></i></a>
+			<a href="https://www.facebook.com/shirbd1" class="fa fa-facebook"></a>
+			<a href="https://www.instagram.com/shir_ben_dor/" class="fa fa-instagram"></a>
+		</span>
+	</footer>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="javascript/functions.js"></script>
+	<script src="javascript/settingFunc.js"></script>
+</body>
+
+</html>
